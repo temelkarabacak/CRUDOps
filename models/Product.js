@@ -28,16 +28,9 @@ const schema = new Schema({
     categoryId:{
         type: String,
     },
-    createdDate: {
-        type: Date,
-        default: Date.now,
-    },
-    updatedDate: {
+    deletedAt: {
         type: Date,
     },
-    deletedDate: {
-        type: Date,
-    },
-});
+}, { timestamps: true, collection: 'Products' });
 
 module.exports = Product = mongoose.model('Product', schema);

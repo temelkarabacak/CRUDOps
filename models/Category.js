@@ -13,16 +13,9 @@ const schema = new Schema({
     description: {
         type: String
     },
-    createdDate: {
-        type: Date,
-        default: Date.now,
-    },
-    updatedDate: {
+    deletedAt: {
         type: Date,
     },
-    deletedDate: {
-        type: Date,
-    },
-});
+}, { timestamps: true, collection: 'Categories' });
 
 module.exports = Category = mongoose.model('Category', schema);

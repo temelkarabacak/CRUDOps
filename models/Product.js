@@ -25,8 +25,9 @@ const schema = new Schema({
         type: Number,
         default: 0,
     },
-    categoryId:{
-        type: String,
+    category:{
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
     },
     deletedAt: {
         type: Date,

@@ -16,6 +16,7 @@ const schema = new Schema({
     deletedAt: {
         type: Date,
     },
+    products: [ { type: Schema.Types.ObjectId, ref: 'Product' } ]
 }, { timestamps: true, collection: 'Categories' });
 
 module.exports = Category = mongoose.model('Category', schema);
